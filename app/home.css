@@ -1,0 +1,170 @@
+section {
+    padding: 120px 0;
+}
+
+
+.section-heading h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+#hero {
+    height: 100vh;
+    padding: 0;
+}
+
+#hero .carousel-inner {
+    height: 100vh;
+}
+
+
+
+
+#hero .carousel-inner .carousel-caption {
+    bottom: 350px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+}
+
+#hero .carousel-inner .carousel-caption h5 {
+    font-size: 40px;
+}
+
+#hero .carousel-inner .carousel-caption p {
+    font-size: 30px;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+#expertise {
+    background-color: #eeeeee;
+    background: url("/expertise.jpg") no-repeat;
+    background-size: cover;
+}
+
+#expertise .section-heading {
+    color: #fff;
+}
+
+#expertise .expertise .boxes {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 380px);
+}
+
+#expertise .expertise .boxes .box {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid red;
+    border-radius: 20px;
+    text-align: center;
+    height: 450px;
+}
+
+#expertise .expertise .boxes .box .icon {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+
+#expertise .expertise .boxes .box .icon i {
+    font-size: 66px;
+    color: #fff;
+}
+
+#expertise .expertise .boxes .box h3 {
+    margin: 20px 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#expertise .expertise .boxes .box p {
+    color: #fff;
+    font-size: 14px;
+}
+
+#products .products .boxes {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#products .products .boxes .product {
+
+    margin: 0 20px;
+    border: 1px solid red;
+    border-radius: 20px;
+    width: 350px;
+    height: auto;
+}
+
+#products .products .boxes .product h4 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#products .products .boxes .product h5 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#products .products .boxes .product a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: black;
+    border-radius: 20px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#products .products .boxes .product a:hover {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: orange;
+    border-radius: 20px;
+    color: #000;
+    transition: all 0.5s ease;
+}
+
+#products .products .boxes .product img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+
+#projects {
+    background-color: #eeeeee;
+
+}
+
+#projects .boxes {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+#projects .boxes .project {
+    width: 300px;
+
+}
+
+#works {
+    background-color: #eeeeee;
+
+}
