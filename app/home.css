@@ -169,6 +169,10 @@ section {
 
 }
 
+#clients {
+    padding-bottom: 80px;
+}
+
 #clients .reviews {
     margin-top: 40px;
     padding-bottom: 40px;
@@ -184,3 +188,8 @@ section {
     margin-top: 10px;
     font-size: 20px;
 }
+
+/* #client-logo {
+    padding: 0;
+    padding-bottom: 120px;
+} */

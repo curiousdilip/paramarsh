@@ -2,7 +2,7 @@
 import React from 'react'
 import Header from './components/Header'
 import "./home.css"
-import { clients, expertise, heroSlides, projects } from './data/home'
+import { clientLogo, clients, expertise, heroSlides, projects } from './data/home'
 import Footer from './components/Footer'
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -14,6 +14,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Image from 'next/image'
 const page = () => {
   useEffect(() => {
     AOS.init();
@@ -265,7 +266,57 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
+
+      {/* <section id="client-logo">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <Swiper
+
+                // modules={[Pagination]}
+                // slidesPerView={5}
+                // loop={true}
+                cssMode={true}
+                autoplay={{
+                  delay: 1000,
+                  disableOnInteraction: false,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                  },
+                }}
+                modules={[Autoplay]}
+                className="client-logo"
+              >
+                {clientLogo.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <Image
+                      width={130}
+                      height={80}
+                      src={item.logo}
+                      style={{
+                        objectFit: "contain"
+                      }}
+                      alt='client logo'
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
+        </div>
+      </section> */}
       <section id="works">
         <div className="container">
           <div className="row justify-content-center">

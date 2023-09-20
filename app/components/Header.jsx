@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from "react";
 import Image from 'next/image';
 import logoImage from "/public/logo.png"
+import Link from 'next/link';
 const Header = () => {
     useEffect(() => {
         require("bootstrap/dist/js/bootstrap.bundle.min.js");
@@ -32,7 +33,7 @@ const Header = () => {
             <header>
                 <nav className="navbar navbar-expand-lg fixed-top">
                     <div className="container">
-                        <a className="navbar-brand" href="#">
+                        <Link className="navbar-brand" href="#">
                             <Image
                                 src={logoImage}
                                 alt="Paramarsh Logo"
@@ -40,28 +41,28 @@ const Header = () => {
                                 height={46}
                                 priority={true}
                             />
-                        </a>
+                        </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#about">About Paramarsh</a>
+                                    <Link className="nav-link" href="#about">About Paramarsh</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#expertise">Our Expertise</a>
+                                    <Link className="nav-link" href="#expertise">Our Expertise</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#products">Our Products</a>
+                                    <Link className="nav-link" href="#products">Our Products</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#projects">Our Recent Projects</a>
+                                    <Link className="nav-link" href="#projects">Our Recent Projects</Link>
                                 </li>   <li className="nav-item">
-                                    <a className="nav-link" href="#clients">Our Clients</a>
+                                    <Link className="nav-link" href="#clients">Our Clients</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#works">Work For Us</a>
+                                    <Link className="nav-link" href="#works">Work For Us</Link>
                                 </li>
 
                             </ul>
