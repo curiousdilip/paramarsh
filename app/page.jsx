@@ -1,12 +1,23 @@
+"use client"
 import React from 'react'
-
 import Header from './components/Header'
 import "./home.css"
-import { expertise, heroSlides, projects } from './data/home'
+import { clients, expertise, heroSlides, projects } from './data/home'
 import Footer from './components/Footer'
-
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const page = () => {
-
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <>
       <Header />
@@ -214,6 +225,43 @@ const page = () => {
             <div className="col-md-12 text-center">
               <p>Our clientele is quite diversified covering a vast range of vertical and horizontal segments. It includes international agencies, government sector, non-profit organizations, start-ups and SMBs in India and overseas, educational institutions and research organizations.
               </p>
+
+              <Swiper
+                slidesPerView={1}
+                navigation={true}
+                spaceBetween={10}
+                pagination={true}
+                loop={true}
+                cssMode={true}
+                // breakpoints={{
+                //   640: {
+                //     slidesPerView: 1,
+                //     spaceBetween: 20,
+                //   },
+                //   768: {
+                //     slidesPerView: 2,
+                //     spaceBetween: 40,
+                //   },
+                //   1024: {
+                //     slidesPerView: 3,
+                //     spaceBetween: 50,
+                //   },
+                // }}
+                modules={[Navigation, Pagination]}
+                className="reviews"
+              >
+                {clients.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="review-box ">
+                      <p>{item.review}</p>
+
+                      <div className="author">
+                        <h3>{item.name}</h3>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>

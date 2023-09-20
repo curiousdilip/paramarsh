@@ -30,6 +30,18 @@ export const expertise = [
     }
 
 ]
+
+export const clients = [{
+    review: "The manner in which you turned the hard-coded PCPNDT reporting website into a flexible and intelligently designed application is truly commendable. It is indeed a pleasure working with you and your team - especially because of your being ever ready to go beyond the brief and travel the extra mile to raise the bar in the software you design for us.",
+    name: "Rajat Ray, Sr. Advocacy & Communication Officer, United Nations Population Fund"
+}, {
+    review: "Customer expectations are growing and we need to think about new innovative ways to deliver service excellence to our customers and PARAMARSH has been a great partner in that solution delivery.They have brought to the table demonstrated operational results to our end-to-end expertise in the enterprise level services. Additionally, what is very important in our partnership is their flexibility and adaptability to different market conditions and needs.   ",
+    name: "Leo Righele, Director, Enterprise Network Solutions    "
+}, {
+    review: "The recent economic conditions have made it ever more important for businesses to develop strong global alliances and ensure that they are leveraging the global delivery model to their full advantage.    ",
+    name: "Geoff Lee, CEO, Pulatech, Inc."
+}]
+
 export const heroSlides = [
     {
         image: "https://source.unsplash.com/QBpZGqEMsKg",

@@ -168,3 +168,19 @@ section {
     background-color: #eeeeee;
 
 }
+
+#clients .reviews {
+    margin-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+#clients .reviews .review-box {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#clients .reviews .review-box .author h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}

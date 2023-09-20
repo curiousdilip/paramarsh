@@ -29,3 +29,55 @@ header.scrolled nav {
 header.scrolled nav .nav-link {
     color: #000;
 }
+
+
+footer .footer-top {
+    padding: 40px 0;
+}
+
+footer .footer-top .content p {
+    margin: 20px 0;
+}
+
+footer .footer-top .content a {
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #0164ff;
+    display: inline-block;
+}
+
+footer .footer-top .details .icons {
+    margin: 20px 0;
+}
+
+footer .footer-top .details .icons .icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+footer .footer-top .details .icons .icon i {
+    margin-right: 10px;
+}
+
+footer .footer-bottom {
+    padding: 40px 0;
+    border-top: 1px solid #0164ff;
+}
+
+
+footer .footer-bottom .social-media {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .footer-bottom .social-media a {
+    margin-right: 20px;
+}
+
+footer .footer-bottom .social-media a:last-child {
+    margin-right: 0;
+}
