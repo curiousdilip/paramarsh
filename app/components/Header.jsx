@@ -33,7 +33,7 @@ const Header = () => {
             <header>
                 <nav className="navbar navbar-expand-lg fixed-top">
                     <div className="container">
-                        <Link className="navbar-brand" href="#">
+                        <a className="navbar-brand" href="#">
                             <Image
                                 src={logoImage}
                                 alt="Paramarsh Logo"
@@ -41,28 +41,28 @@ const Header = () => {
                                 height={46}
                                 priority={true}
                             />
-                        </Link>
+                        </a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link" href="#about">About Paramarsh</Link>
+                                    <Link className="nav-link" href="#about">About </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" href="#expertise">Our Expertise</Link>
+                                    <Link className="nav-link" href="#expertise"> Expertise</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" href="#products">Our Products</Link>
+                                    <Link className="nav-link" href="#products"> Products</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" href="#projects">Our Recent Projects</Link>
+                                    <Link className="nav-link" href="#projects"> Projects</Link>
                                 </li>   <li className="nav-item">
-                                    <Link className="nav-link" href="#clients">Our Clients</Link>
+                                    <Link className="nav-link" href="#clients"> Clients</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" href="#works">Work For Us</Link>
+                                    <Link className="nav-link" href="#works">Career</Link>
                                 </li>
 
                             </ul>

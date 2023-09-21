@@ -42,53 +42,41 @@ section {
 
 #expertise {
     background-color: #eeeeee;
-    background: url("/expertise.jpg") no-repeat;
-    background-size: cover;
 }
 
-#expertise .section-heading {
-    color: #fff;
+#expertise h3 {
+    margin-bottom: 20px;
+    font-size: 35px;
 }
 
-#expertise .expertise .boxes {
-    display: grid;
-    place-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, 380px);
+#expertise .accordion-item {
+    background-color: transparent;
+    border: none;
 }
 
-#expertise .expertise .boxes .box {
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid red;
-    border-radius: 20px;
-    text-align: center;
-    height: 450px;
+#expertise .accordion-item .accordion-button:focus {
+    box-shadow: none;
 }
 
-#expertise .expertise .boxes .box .icon {
-    display: inline-block;
-    border: 2px solid #fff;
-    padding: 15px 20px;
-    border-radius: 15px;
-}
-
-#expertise .expertise .boxes .box .icon i {
-    font-size: 66px;
-    color: #fff;
-}
-
-#expertise .expertise .boxes .box h3 {
-    margin: 20px 0;
+#expertise .accordion-item .accordion-header .accordion-button {
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    padding: 10px 0;
     font-size: 20px;
-    color: #fff;
-    font-weight: 700;
+    font-weight: 400;
 }
 
-#expertise .expertise .boxes .box p {
-    color: #fff;
-    font-size: 14px;
+
+#expertise .accordion-item .accordion-body {
+    padding: 0;
 }
+
+#expertise .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+    color: #000;
+    box-shadow: none;
+}
+
 
 #products .products .boxes {
     display: grid;
@@ -174,7 +162,6 @@ section {
 }
 
 #clients .reviews {
-    margin-top: 40px;
     padding-bottom: 40px;
 
 }
@@ -189,7 +176,6 @@ section {
     font-size: 20px;
 }
 
-/* #client-logo {
-    padding: 0;
-    padding-bottom: 120px;
-} */
+#clients .client-logo {
+    padding: 30px 0;
+}

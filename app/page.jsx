@@ -40,7 +40,15 @@ const page = () => {
           <div className="carousel-inner">
             {heroSlides.map((item, index) => (
               <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                <img src={item.image} className="d-block w-100" alt="Slider Image" />
+                <Image
+                  src={item.image}
+                  className='d-block w-100 h-100'
+                  alt='slider image'
+                  width={1920}
+                  height={1080}
+                  style={{ objectFit: "cover" }}
+                />
+                {/* <img src={item.image} className="d-block w-100" alt="Slider Image" /> */}
                 <div className="carousel-caption d-none d-md-block">
                   <h5>{item.title}</h5>
                   <p>{item.description}</p>
@@ -80,28 +88,50 @@ const page = () => {
           <div className="row justify-content-center">
             <div className="col-lg-6 col-md-10">
               <div className="section-heading text-center">
-                <h2 data-aos="fade-left">Our Expertise
+                <h2 data-aos="fade-left">Why Choose us
                 </h2>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-12">
-              <div className="expertise">
-                <div className="boxes">
-
-                  {expertise.map((item, index) => (
-                    <div className="box" key={index} data-aos="fade-right">
-                      <div className="icon">
-                        <i className={item.icon}></i>
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <h3>A few reasons why our valued customers choose us.</h3>
+              <div className="accordion" id="expertise-accordion">
+                {expertise.map((item, index) => (
+                  <div className="accordion-item" key={index}>
+                    <h2 className="accordion-header">
+                      <button
+                        className={`accordion-button ${index === 0 ? 'collapsed' : ''}`} // Add 'collapsed' class to all except the first one
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#collapse${index}`} // Use the index to create unique IDs
+                        aria-expanded={index === 0 ? 'true' : 'false'} // Set 'true' for the first item, 'false' for others
+                        aria-controls={`collapse${index}`} // Use the index to reference the correct collapse element
+                      >
+                        {item.title}
+                      </button>
+                    </h2>
+                    <div
+                      id={`collapse${index}`} // Use the index to reference the correct collapse element
+                      className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`} // Add 'show' class to the first one
+                      data-bs-parent="#expertise-accordion"
+                    >
+                      <div className="accordion-body">
+                        {item.description}
                       </div>
-                      <h3>{item.title}</h3>
-                      <p>{item.description}
-                      </p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
+
+            </div>
+            <div className="col-md-6">
+              <Image
+                src="/expertise.jpeg"
+                alt='expertise'
+                width={500}
+                height={500}
+                style={{ objectFit: "cover" }} />
             </div>
           </div>
         </div>
@@ -222,10 +252,49 @@ const page = () => {
               </div>
             </div>
           </div>
+
           <div className="row">
             <div className="col-md-12 text-center">
               <p>Our clientele is quite diversified covering a vast range of vertical and horizontal segments. It includes international agencies, government sector, non-profit organizations, start-ups and SMBs in India and overseas, educational institutions and research organizations.
               </p>
+
+              <Swiper
+                loop={true}
+                autoplay={{
+                  delay: 1200,
+                  disableOnInteraction: false,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                  },
+                }}
+                modules={[Autoplay]}
+                className="client-logo"
+              >
+                {clientLogo.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <Image
+                      width={130}
+                      height={80}
+                      src={item.logo}
+                      style={{
+                        objectFit: "contain"
+                      }}
+                      alt='client logo'
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
 
               <Swiper
                 slidesPerView={1}
@@ -267,56 +336,6 @@ const page = () => {
           </div>
         </div>
       </section >
-
-      {/* <section id="client-logo">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <Swiper
-
-                // modules={[Pagination]}
-                // slidesPerView={5}
-                // loop={true}
-                cssMode={true}
-                autoplay={{
-                  delay: 1000,
-                  disableOnInteraction: false,
-                }}
-                breakpoints={{
-                  640: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                  },
-                  768: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
-                  },
-                  1024: {
-                    slidesPerView: 5,
-                    spaceBetween: 50,
-                  },
-                }}
-                modules={[Autoplay]}
-                className="client-logo"
-              >
-                {clientLogo.map((item, index) => (
-                  <SwiperSlide key={index}>
-                    <Image
-                      width={130}
-                      height={80}
-                      src={item.logo}
-                      style={{
-                        objectFit: "contain"
-                      }}
-                      alt='client logo'
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section id="works">
         <div className="container">
           <div className="row justify-content-center">
