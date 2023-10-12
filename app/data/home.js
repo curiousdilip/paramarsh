@@ -96,47 +96,47 @@ export const clients = [
 
 export const heroSlides = [
   {
-    image: "/banner-image.jpeg",
+    image: "/slides/Technical Consulting.jpg",
     title: "Technical Consulting",
     description:
       "Effective technical Consulting by aligning capabilities with client business proposition and building collaborative relationships",
   },
   {
-    image: "/banner-image.jpeg",
+    image: "/slides/Diverified Client Base.jpg",
 
     title: "Diverified Client Base",
     description:
       "Diversified Client Base covering a wide of vertical and horizontal segments and geographical locations",
   },
   {
-    image: "/banner-image.jpeg",
+    image: "/slides/End to End Solutions.jpg",
 
     title: "End to End Solutions",
     description:
       "End to End Solutions for strategic consulting, creative design, technology integration and implementation",
   },
   {
-    image: "/banner-image.jpeg",
+    image: "/slides/Innovative.jpg",
 
     title: "Innovative",
     description:
       "Approach, Practice  and Experience that create innovative solutions to address a diverse range of client buiness needs",
   },
   {
-    image: "/banner-image.jpeg",
+    image: "/slides/IT Services.jpg",
 
     title: "IT Services",
     description:
       "Cutting edge IT Services in the design, integration  and optimization  of high quality, enterprise-level IT infrastruture",
   },
   {
-    image: "/banner-image.jpeg",
+    image: "/slides/Offshore Advantage.jpg",
 
     title: "Offshore Advantage",
     description: "Offshore Advantage for reliable and cost-effective results",
   },
   {
-    image: "/banner-image.jpeg",
+    image: "/slides/Product Engineering.jpg",
     title: "Product Engineering ",
     description:
       "Innovative and feature rich product engineering in tune with market dynamics and technology driven by optimal research and development spends",

@@ -8,32 +8,8 @@ section {
 }
 
 #hero {
-  height: 100vh;
+  /* height: 100vh; */
   padding: 0;
-}
-
-#hero .carousel-inner {
-  height: 100vh;
-}
-
-#hero .carousel-inner .carousel-caption {
-  bottom: 350px;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-}
-
-#hero .carousel-inner .carousel-caption h5 {
-  font-size: 40px;
-}
-
-#hero .carousel-inner .carousel-caption p {
-  font-size: 30px;
-}
-
-.carousel-indicators [data-bs-target] {
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
 }
 
 #expertise {

@@ -1,0 +1,83 @@
+#hero-slider .carousel-inner {
+  /* height: 100vh; */
+}
+#hero-slider .carousel-inner .carousel-item {
+  height: 1080px;
+  max-height: 100vh;
+}
+#hero-slider .carousel-inner .carousel-item img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  animation: sliding 2s ease;
+  position: relative;
+}
+
+#hero-slider .carousel-inner .carousel-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#hero-slider .carousel-inner .carousel-caption {
+  height: 100%;
+  display: flex !important;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+#hero-slider .carousel-inner .carousel-caption .content {
+  border-radius: 30px;
+  padding: 30px;
+}
+
+#hero-slider .carousel-inner .carousel-caption h5 {
+  font-size: 3rem;
+  opacity: 0;
+  animation: captionAnimation 0.5s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+#hero-slider .carousel-inner .carousel-caption p {
+  font-size: 18px;
+  margin: 5px 0 30px;
+  opacity: 0;
+  animation: captionAnimation 0.5s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+
+.carousel-indicators [data-bs-target] {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+@keyframes sliding {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes captionAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
