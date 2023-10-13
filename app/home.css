@@ -175,7 +175,33 @@ section {
 }
 
 @media (max-width: 768px) {
-  #hero {
-    height: 70vh;
+  section {
+    overflow-x: hidden;
+  }
+  #about {
+    padding: 50px 0;
+  }
+  #expertise {
+    padding: 50px 0;
+  }
+  #products {
+    padding: 50px 0;
+  }
+
+  #products .products .boxes {
+    grid-template-columns: auto;
+  }
+  #projects {
+    padding: 50px 0;
+  }
+
+  #projects .boxes {
+    grid-template-columns: auto;
+  }
+  #clients {
+    padding: 50px 0;
+  }
+  #works {
+    padding: 50px 0;
   }
 }
