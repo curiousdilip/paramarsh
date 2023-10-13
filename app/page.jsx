@@ -6,7 +6,6 @@ import {
   clientLogo,
   clients,
   expertise,
-  heroSlides,
   projects,
 } from "./data/home";
 import Footer from "./components/Footer";
@@ -31,48 +30,6 @@ const page = () => {
       <Header />
 
       <section id="hero">
-        {/* <div id="hero-slider" className="carousel slide" data-bs-ride="carousel">
-          <div className="carousel-indicators">
-            {heroSlides.map((item, index) => (
-              <button
-                key={index}
-                type="button"
-                data-bs-target="#hero-slider"
-                data-bs-slide-to={index}
-                className={index === 0 ? 'active' : ''}
-                aria-label={`Slide ${index + 1}`}
-              ></button>
-            ))}
-          </div>
-          <div className="carousel-inner">
-            {heroSlides.map((item, index) => (
-              <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                <Image
-                  src={item.image}
-                  className='d-block w-100 h-100'
-                  alt='slider image'
-                  width={1920}
-                  height={1080}
-                  style={{ objectFit: "cover" }}
-                />
-                <img src={item.image} className="d-block w-100" alt="Slider Image" />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>{item.title}</h5>
-                  <p>{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#hero-slider" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#hero-slider" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div> */}
-
         <HeroSlider />
       </section>
       <section id="about">
@@ -119,9 +76,8 @@ const page = () => {
                   <div className="accordion-item" key={index}>
                     <h2 className="accordion-header">
                       <button
-                        className={`accordion-button ${
-                          index === 0 ? "collapsed" : ""
-                        }`} // Add 'collapsed' class to all except the first one
+                        className={`accordion-button ${index === 0 ? "collapsed" : ""
+                          }`} // Add 'collapsed' class to all except the first one
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target={`#collapse${index}`} // Use the index to create unique IDs
@@ -133,9 +89,8 @@ const page = () => {
                     </h2>
                     <div
                       id={`collapse${index}`} // Use the index to reference the correct collapse element
-                      className={`accordion-collapse collapse ${
-                        index === 0 ? "show" : ""
-                      }`} // Add 'show' class to the first one
+                      className={`accordion-collapse collapse ${index === 0 ? "show" : ""
+                        }`} // Add 'show' class to the first one
                       data-bs-parent="#expertise-accordion"
                     >
                       <div className="accordion-body">{item.description}</div>
@@ -146,7 +101,7 @@ const page = () => {
             </div>
             <div className="col-md-6">
               <Image
-                src="/expertise.jpeg"
+                src="/expertise.jpg"
                 alt="expertise"
                 width={500}
                 height={500}
@@ -173,7 +128,15 @@ const page = () => {
                   <div className="product">
                     <h4>XS-ALL</h4>
                     <h5>Content organised, accessible anywhere anytime</h5>
-                    <img src="/xs-all.jpg" alt="" />
+                    <Image
+                      src="/xs-all.jpg"
+                      alt="xs-all"
+                      width={400}
+                      height={200}
+                      className="img-fluid"
+                      style={{ objectFit: "cover" }}
+                    />
+
                     <ul>
                       <li>
                         XS-ALL provides a central database for all organisation
@@ -208,7 +171,15 @@ const page = () => {
                   <div className="product">
                     <h4>CONTRIEVE</h4>
                     <h5>Your organisation's Smart Address Book</h5>
-                    <img src="/contrieve.jpg" alt="" />
+
+                    <Image
+                      src="/contrieve.jpg"
+                      alt="contrieve"
+                      width={400}
+                      height={200}
+                      className="img-fluid"
+                      style={{ objectFit: "cover" }}
+                    />
                     <ul>
                       <li>Organise and update contacts</li>
                       <li>
@@ -228,7 +199,16 @@ const page = () => {
                   <div className="product">
                     <h4>METEOR</h4>
                     <h5>Mobile and Web based Surveillance Toolkit</h5>
-                    <img src="/meteor.jpg" alt="" />
+
+
+                    <Image
+                      src="/meteor.jpg"
+                      alt="meteor"
+                      width={400}
+                      height={200}
+                      className="img-fluid"
+                      style={{ objectFit: "cover" }}
+                    />
                     <ul>
                       <li>Create a questionnaire within minutes</li>
                       <li>
@@ -270,7 +250,13 @@ const page = () => {
                 {projects.map((item, index) => (
                   <div className="project" key={index}>
                     <div className="img-box">
-                      <img src={item.image} className="img-fluid" />
+                      <Image
+                        src={item.image}
+                        alt="Project Image"
+                        width={400}
+                        height={200}
+                        className="img-fluid"
+                        style={{ objectFit: "cover" }} />
                     </div>
                     <div className="details">
                       <h3>{item.title}</h3>
@@ -311,11 +297,11 @@ const page = () => {
                 }}
                 breakpoints={{
                   640: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                     spaceBetween: 20,
                   },
                   768: {
-                    slidesPerView: 2,
+                    slidesPerView: 3,
                     spaceBetween: 40,
                   },
                   1024: {
@@ -348,20 +334,6 @@ const page = () => {
                 pagination={true}
                 loop={true}
                 cssMode={true}
-                // breakpoints={{
-                //   640: {
-                //     slidesPerView: 1,
-                //     spaceBetween: 20,
-                //   },
-                //   768: {
-                //     slidesPerView: 2,
-                //     spaceBetween: 40,
-                //   },
-                //   1024: {
-                //     slidesPerView: 3,
-                //     spaceBetween: 50,
-                //   },
-                // }}
                 modules={[Navigation, Pagination]}
                 className="reviews"
               >

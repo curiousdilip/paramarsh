@@ -5,8 +5,10 @@ import Image from 'next/image';
 import logoDark from "/public/logo.svg"
 import logoLight from "/public/logo-white.svg"
 import Link from 'next/link';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 const Header = () => {
+    useEffect(() => {
+        require("bootstrap/dist/js/bootstrap.bundle.min.js");
+    }, []);
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -22,7 +24,7 @@ const Header = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    const scroll = classnames('mainHeader', {
+    const scroll = classnames({
         'scrolled': scrolled,
     })
     const logoImage = scrolled ? logoDark : logoLight;
