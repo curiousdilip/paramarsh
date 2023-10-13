@@ -81,3 +81,18 @@
     transform: translateX(0);
   }
 }
+
+@media (max-width: 768px) {
+  #hero-slider .carousel-inner .carousel-item {
+    height: 700px;
+    max-height: 70vh;
+  }
+
+  #hero-slider .carousel-inner .carousel-caption h5 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  #hero-slider .carousel-inner .carousel-caption p {
+    font-size: 16px;
+  }
+}
