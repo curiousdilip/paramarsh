@@ -150,6 +150,7 @@ const page = () => {
                 alt="expertise"
                 width={500}
                 height={500}
+                className="img-fluid"
                 style={{ objectFit: "cover" }}
               />
             </div>

@@ -184,6 +184,11 @@ section {
   #expertise {
     padding: 80px 0;
   }
+
+  #expertise img {
+    margin: 0;
+    margin-top: 30px;
+  }
   #products {
     padding: 80px 0;
   }
