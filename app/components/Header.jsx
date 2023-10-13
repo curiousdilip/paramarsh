@@ -2,7 +2,7 @@
 import React from 'react'
 import { useEffect } from "react";
 import Image from 'next/image';
-import logoImage from "/public/logo.png"
+import logoImage from "/public/logo.svg"
 import Link from 'next/link';
 const Header = () => {
     useEffect(() => {
