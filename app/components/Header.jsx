@@ -1,36 +1,34 @@
 "use client"
-import React from 'react'
-import { useEffect } from "react";
+import classnames from 'classnames';
+import { useEffect, useState } from "react";
 import Image from 'next/image';
-import logoImage from "/public/logo.svg"
+import logoDark from "/public/logo.svg"
+import logoLight from "/public/logo-white.svg"
 import Link from 'next/link';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 const Header = () => {
-    useEffect(() => {
-        require("bootstrap/dist/js/bootstrap.bundle.min.js");
-    }, []);
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
-        // Function to add a class when the page is scrolled
         function handleScroll() {
-            const nav = document.querySelector('header');
             if (window.scrollY > 20) {
-                nav.classList.add('scrolled');
+                setScrolled(true);
             } else {
-                nav.classList.remove('scrolled');
+                setScrolled(false);
             }
         }
-
-        // Attach the scroll event listener
         window.addEventListener('scroll', handleScroll);
-
-        // Cleanup the event listener when the component unmounts
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    const scroll = classnames('mainHeader', {
+        'scrolled': scrolled,
+    })
+    const logoImage = scrolled ? logoDark : logoLight;
     return (
         <>
-            <header>
+            <header className={scroll}>
                 <nav className="navbar navbar-expand-lg fixed-top">
                     <div className="container">
                         <a className="navbar-brand" href="#">
