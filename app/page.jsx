@@ -23,7 +23,12 @@ import Image from "next/image";
 import HeroSlider from "./components/HeroSlider";
 const page = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      // easing: "ease-out-cubic",
+      once: true,
+      offset: 50,
+    });
+
   }, []);
   return (
     <>
@@ -74,7 +79,7 @@ const page = () => {
               <div className="accordion" id="expertise-accordion">
                 {expertise.map((item, index) => (
                   <div className="accordion-item" key={index}>
-                    <h2 className="accordion-header">
+                    <h2 className="accordion-header" data-aos="fade-right">
                       <button
                         className={`accordion-button ${index === 0 ? "collapsed" : ""
                           }`} // Add 'collapsed' class to all except the first one
@@ -91,7 +96,7 @@ const page = () => {
                       id={`collapse${index}`} // Use the index to reference the correct collapse element
                       className={`accordion-collapse collapse ${index === 0 ? "show" : ""
                         }`} // Add 'show' class to the first one
-                      data-bs-parent="#expertise-accordion"
+                      data-bs-parent="#expertise-accordion" data-aos="fade-right"
                     >
                       <div className="accordion-body">{item.description}</div>
                     </div>
@@ -125,7 +130,7 @@ const page = () => {
             <div className="col-md-12">
               <div className="products">
                 <div className="boxes">
-                  <div className="product">
+                  <div className="product" data-aos="fade-right">
                     <h4>XS-ALL</h4>
                     <h5>Content organised, accessible anywhere anytime</h5>
                     <Image
@@ -168,7 +173,7 @@ const page = () => {
                       </div>
                     ))} */}
                   </div>
-                  <div className="product">
+                  <div className="product" data-aos="fade-down">
                     <h4>CONTRIEVE</h4>
                     <h5>Your organisation's Smart Address Book</h5>
 
@@ -196,7 +201,7 @@ const page = () => {
                       <li>Print labels and envelopes</li>
                     </ul>
                   </div>
-                  <div className="product">
+                  <div className="product" data-aos="fade-left">
                     <h4>METEOR</h4>
                     <h5>Mobile and Web based Surveillance Toolkit</h5>
 
@@ -235,7 +240,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section id="projects">
+      <section id="projects" >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-6 col-md-10">
@@ -248,7 +253,7 @@ const page = () => {
             <div className="col-md-12">
               <div className="boxes">
                 {projects.map((item, index) => (
-                  <div className="project" key={index}>
+                  <div className="project" key={index} data-aos="fade-right">
                     <div className="img-box">
                       <Image
                         src={item.image}
@@ -274,7 +279,7 @@ const page = () => {
           <div className="row justify-content-center">
             <div className="col-lg-6 col-md-10">
               <div className="section-heading text-center">
-                <h2>Our Clients</h2>
+                <h2 data-aos="fade-right">Our Clients</h2>
               </div>
             </div>
           </div>
@@ -358,13 +363,13 @@ const page = () => {
           <div className="row justify-content-center">
             <div className="col-lg-6 col-md-10">
               <div className="section-heading text-center">
-                <h2>Work For Us</h2>
+                <h2 data-aos="fade-right" >Work For Us</h2>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-12 text-center">
-              <p>
+              <p data-aos="fade-right">
                 At Paramarsh we believe that employee satisfaction, enhanced
                 performance and customer satisfaction are tied in a symbiotic
                 relationship. Hence our focus lies on developing and harnessing
