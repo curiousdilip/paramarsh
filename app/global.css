@@ -29,6 +29,14 @@ header.scrolled nav .nav-link {
   color: #000;
 }
 
+header nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+header.scrolled nav .nav-link:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 footer .footer-top {
   padding: 40px 0;
 }
@@ -45,9 +53,11 @@ footer .footer-top .content a {
   background-color: #0164ff;
   display: inline-block;
 }
+
 footer .footer-top .details {
   margin-left: 15%;
 }
+
 footer .footer-top .details .icons {
   margin: 20px 0;
 }
@@ -95,6 +105,7 @@ footer .footer-bottom .social-media a:last-child {
     text-align: center;
     margin-bottom: 10px;
   }
+
   footer .footer-bottom .social-media {
     display: flex;
     justify-content: center;
