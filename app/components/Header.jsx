@@ -6,6 +6,7 @@ import logoDark from "/public/logo.svg"
 import logoLight from "/public/logo-white.svg"
 import Link from 'next/link';
 const Header = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
     useEffect(() => {
         require("bootstrap/dist/js/bootstrap.bundle.min.js");
     }, []);
@@ -28,6 +29,9 @@ const Header = () => {
         'scrolled': scrolled,
     })
     const logoImage = scrolled ? logoDark : logoLight;
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
     return (
         <>
             <header className={scroll}>
@@ -40,10 +44,14 @@ const Header = () => {
                                 width={205}
                                 height={46}
                                 priority={true}
+
                             />
                         </a>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={toggleMenu}>
+                            {/* <span className="navbar-toggler-icon"></span> */}
+                            <span className="icon-bar top-bar"></span>
+                            <span className="icon-bar middle-bar"></span>
+                            <span className="icon-bar bottom-bar"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
