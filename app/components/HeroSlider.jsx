@@ -1,7 +1,7 @@
 import { heroSlides } from "../data/home";
 import "./hero-slider.css";
 import Image from "next/image";
-export default function HeroSlider({ }) {
+export default function HeroSlider({}) {
   return (
     <>
       <div id="hero-slider" className="carousel slide" data-bs-ride="carousel">
@@ -27,8 +27,8 @@ export default function HeroSlider({ }) {
                 src={item.image}
                 className="d-block w-100 h-100"
                 alt="slider image"
-                width={1920}
-                height={1080}
+                width={1800}
+                height={1000}
                 style={{ objectFit: "cover" }}
               />
               {/* <img
