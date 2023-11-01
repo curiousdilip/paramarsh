@@ -74,12 +74,12 @@ section {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
 
-#products .products .boxes .product h4 {
+#products .products .boxes .product h3 {
   text-align: center;
   margin-top: 10px;
 }
 
-#products .products .boxes .product h5 {
+#products .products .boxes .product h4 {
   text-align: center;
   margin: 10px 0;
 }
