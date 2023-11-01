@@ -2,12 +2,7 @@
 import React from "react";
 import Header from "./components/Header";
 import "./home.css";
-import {
-  clientLogo,
-  clients,
-  expertise,
-  projects,
-} from "./data/home";
+import { clientLogo, clients, expertise, projects } from "./data/home";
 import Footer from "./components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -28,7 +23,6 @@ const page = () => {
       once: true,
       offset: 50,
     });
-
   }, []);
   return (
     <>
@@ -81,8 +75,9 @@ const page = () => {
                   <div className="accordion-item" key={index}>
                     <h2 className="accordion-header" data-aos="fade-right">
                       <button
-                        className={`accordion-button ${index === 0 ? "collapsed" : ""
-                          }`} // Add 'collapsed' class to all except the first one
+                        className={`accordion-button ${
+                          index === 0 ? "collapsed" : ""
+                        }`} // Add 'collapsed' class to all except the first one
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target={`#collapse${index}`} // Use the index to create unique IDs
@@ -94,9 +89,11 @@ const page = () => {
                     </h2>
                     <div
                       id={`collapse${index}`} // Use the index to reference the correct collapse element
-                      className={`accordion-collapse collapse ${index === 0 ? "show" : ""
-                        }`} // Add 'show' class to the first one
-                      data-bs-parent="#expertise-accordion" data-aos="fade-right"
+                      className={`accordion-collapse collapse ${
+                        index === 0 ? "show" : ""
+                      }`} // Add 'show' class to the first one
+                      data-bs-parent="#expertise-accordion"
+                      data-aos="fade-right"
                     >
                       <div className="accordion-body">{item.description}</div>
                     </div>
@@ -205,7 +202,6 @@ const page = () => {
                     <h4>METEOR</h4>
                     <h5>Mobile and Web based Surveillance Toolkit</h5>
 
-
                     <Image
                       src="/meteor.jpg"
                       alt="meteor"
@@ -240,7 +236,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section id="projects" >
+      <section id="projects">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-6 col-md-10">
@@ -261,7 +257,8 @@ const page = () => {
                         width={400}
                         height={200}
                         className="img-fluid"
-                        style={{ objectFit: "cover" }} />
+                        style={{ objectFit: "cover" }}
+                      />
                     </div>
                     <div className="details">
                       <h3>{item.title}</h3>
@@ -363,7 +360,7 @@ const page = () => {
           <div className="row justify-content-center">
             <div className="col-lg-6 col-md-10">
               <div className="section-heading text-center">
-                <h2 data-aos="fade-right" >Work For Us</h2>
+                <h2 data-aos="fade-right">Work For Us</h2>
               </div>
             </div>
           </div>
@@ -386,6 +383,12 @@ const page = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section id="map">
+        <iframe
+          style={{ height: "500px", width: "100%", border: "0" }}
+          src="https://www.google.com/maps/embed/v1/place?q=Paramarsh+Informatics+Private+Limited,+Electronic+City,+Phase+IV,+Udyog+Vihar,+Sector+18,+Gurugram,+Haryana,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+        ></iframe>
       </section>
       <Footer />
     </>

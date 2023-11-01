@@ -70,7 +70,6 @@ section {
   transition: 0.3s;
 }
 
-
 #products .products .boxes .product:hover {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
@@ -224,4 +223,9 @@ section {
   #works {
     padding: 80px 0;
   }
+}
+
+#map {
+  padding: 0;
+  position: relative;
 }
