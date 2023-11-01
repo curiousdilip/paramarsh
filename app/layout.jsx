@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Paramarsh Informatic Pvt. Ltd.</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" href="/favicon.png"/>
         <meta property="og:type" content="website" />
         <meta name="robots" content="follow, index" />
         <meta
@@ -27,21 +27,21 @@ export default function RootLayout({ children }) {
 
         <meta
           property="og:description"
-          content="Paramarsh is a diverse end to end IT solutions provider offering a comprehensive set of software and IT services including strategic consulting, creative design, technology integration and implementation."
+          content="Paramarsh is an IT solutions provider offering software and IT services including consulting, design, and implementation."
         />
         <meta
           name="description"
-          content="Paramarsh is a diverse end to end IT solutions provider offering a comprehensive set of software and IT services including strategic consulting, creative design, technology integration and implementation."
+          content="Paramarsh is an IT solutions provider offering software and IT services including consulting, design, and implementation."
         />
         <meta
           name="twitter:description"
-          content="Paramarsh is a diverse end to end IT solutions provider offering a comprehensive set of software and IT services including strategic consulting, creative design, technology integration and implementation."
+          content="Paramarsh is an IT solutions provider offering software and IT services including consulting, design, and implementation."
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="favicon.png"
+          href="/favicon.png"
         ></link>
       </head>
       <body>{children}</body>

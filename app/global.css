@@ -45,6 +45,11 @@ footer .footer-top .content p {
   margin: 20px 0;
 }
 
+footer .footer-top .content h1 {
+  font-size: 2rem;
+  font-size: calc(1.325rem + 0.9vw);
+}
+
 footer .footer-top .content a {
   text-decoration: none;
   padding: 10px 30px;
@@ -113,6 +118,10 @@ footer .footer-bottom .social-media a:last-child {
   footer .footer-bottom .social-media {
     display: flex;
     justify-content: center;
+  }
+
+  footer .footer-top .content h1 {
+    font-size: calc(1.325rem + 0.9vw);
   }
 }
 

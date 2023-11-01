@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="row footer-top">
             <div className="col-md-6">
               <div className="content">
-                <h2>Paramarsh Informatics Pvt. Ltd. </h2>
+                <h1>Paramarsh Informatics Pvt. Ltd. </h1>
                 <p>
                   PARAMARSH is a diverse end to end IT solutions provider
                   offering a comprehensive set of software and IT services
