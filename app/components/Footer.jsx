@@ -15,7 +15,7 @@ const Footer = () => {
                   including strategic consulting, creative design, technology
                   integration and implementation.
                 </p>
-                <a href="" className="know-more">
+                <a href="mailto:sales@paramarsh.com" className="know-more">
                   Know More
                 </a>
               </div>
@@ -56,18 +56,21 @@ const Footer = () => {
                 <a
                   href="https://www.linkedin.com/company/paramarsh-informatics-pvt-ltd./"
                   target="_blank"
+                  aria-label="Linkedin"
                 >
                   <i className="bi bi-linkedin"></i>
                 </a>
                 <a
                   href="https://www.facebook.com/ParamarshInformaticsPvtLimited/"
                   target="_blank"
+                  aria-label="Facebook"
                 >
                   <i className="bi bi-facebook"></i>
                 </a>
                 <a
                   href="https://www.youtube.com/channel/UCKSc4vVNdNzF20vxhNtwwRg"
                   target="_blank"
+                  aria-label="Youtube"
                 >
                   <i className="bi bi-youtube"></i>
                 </a>
